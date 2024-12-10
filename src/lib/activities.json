@@ -1,0 +1,20 @@
+{
+    "activities": [
+        {
+            "name": "Info Sessions",
+            "description": "Provide a step to step guide sessions on approaching any tech stack or from a range of topics."
+        },
+        {
+            "name": "Hands-on Workshop",
+            "description": "The real fun where the members will show you how to proceed on different app creation."
+        },
+        {
+            "name": "SLoP",
+            "description": "SLoP is an initiative by us to help students to get into Open Source Software world."
+        },
+        {
+            "name": "Dev-O-Lution",
+            "description": "Coming Soon!"
+        }
+    ]
+}
