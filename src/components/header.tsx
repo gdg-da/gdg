@@ -39,7 +39,7 @@ export default function Header() {
                     <li><Link href="/" className="comic-blue comic-text random-rotate text-2xl lg:text-base" onClick={closeMenu}>Home</Link></li>
                     <li><Link href="/events" className="comic-blue comic-text random-rotate text-2xl lg:text-base" onClick={closeMenu}>Events</Link></li>
                     <li><Link href="/team" className="comic-blue comic-text random-rotate text-2xl lg:text-base" onClick={closeMenu}>Team</Link></li>
-                    <li><Button className="comic-red comic-highlight random-rotate hover:-translate-y-1 transition-transform text-2xl lg:text-base" onClick={closeMenu}><a href='https://chat.whatsapp.com/EOUef2JNbFB5hadvb48OWC' target='_blank'>Join Us</a></Button></li>
+                    <li><Button className="comic-red comic-highlight random-rotate hover:-translate-y-1 transition-transform text-2xl lg:text-base" onClick={closeMenu}><a href='https://gdg.community.dev/gdg-on-campus-dhirubhai-ambani-institute-of-information-communication-technology-gandhinagar-india/' target='_blank'>Join Us</a></Button></li>
                 </ul>
             </nav>
             <div className="zigzag animate-fadeIn mt-4 rotate-180"></div>

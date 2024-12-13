@@ -16,7 +16,7 @@ export default function Home() {
     const GrowWithUs = [
         'Follow our social media to stay updated! (links given in the footer :P)',
         'Participate in our workshops and hackathons',
-        'Join our WhatsApp community group and participate in the discussions. Ask your doubts or share cool stuff!'
+        'Join our community group and participate in the discussions. Ask your doubts or share cool stuff!'
     ]
 
     return (
@@ -27,7 +27,7 @@ export default function Home() {
                         <h1 className="text-5xl md:text-6xl font-black mb-6 comic-text random-rotate animate-slideInFromLeft">Welcome to GDG on Campus DA-IICT</h1>
                         <p className="text-xl mb-8 max-w-2xl mx-auto comic-panel random-rotate animate-slideInFromRight">Join our vibrant community of tech enthusiasts, where innovation meets learning. Together, we explore the latest in technology and build amazing things.</p>
                         <div className="flex gap-4 justify-center">
-                            <Button size="lg" className="comic-red comic-highlight random-rotate hover:-translate-y-1 transition-transform animate-scaleIn"><a href='https://chat.whatsapp.com/EOUef2JNbFB5hadvb48OWC' target='_blank'>Join Community</a></Button>
+                            <Button size="lg" className="comic-red comic-highlight random-rotate hover:-translate-y-1 transition-transform animate-scaleIn"><a href='https://gdg.community.dev/gdg-on-campus-dhirubhai-ambani-institute-of-information-communication-technology-gandhinagar-india/' target='_blank'>Join Community</a></Button>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {activities.activities.map((activity, index) => (
                         <div key={index} className="comic-card random-rotate animate-scaleIn" style={{ animationDelay: `${index * 0.1}s` }}>
-                            <h3 className="comic-blue text-2xl font-bold mb-4 comic-text">{activity.name}</h3>
+                            <h3 className="comic-blue text-2xl font-bold mb-4 comic-text">{activity.link ? <a href={activity.link} className='underline' target='_blank'>{activity.name}</a> : activity.name}</h3>
                             <p className="text-lg">{activity.description}</p>
                         </div>
                     ))}

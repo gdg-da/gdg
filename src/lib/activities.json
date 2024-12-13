@@ -10,10 +10,12 @@
         },
         {
             "name": "SLoP",
+            "link": "https://slop.dscdaiict.in",
             "description": "SLoP is an initiative by us to help students to get into Open Source Software world."
         },
         {
             "name": "Dev-O-Lution",
+            "link": "https://devolution.dscdaiict.in",
             "description": "Coming Soon!"
         }
     ]
