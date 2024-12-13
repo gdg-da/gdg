@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { Github, Linkedin, Twitter } from 'lucide-react'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 const coreMembers = [
     {
@@ -159,7 +158,7 @@ const teamMembers = [
     {
         name: 'Anushree',
         role: 'Team Member',
-        image: 'https://github.com/ossdaiict/dsc-website/blob/master/assets/images/team/Anushree.jpg?raw=true',
+        image: 'https://github.com/ossdaiict/dsc-website/blob/master/assets/images/team/AnushreeKaturi.jpg?raw=true',
         description: 'I am a 1st-year Btech student, and I have joined for a management role. I am relatively new to the tech landscape, but I am developing interest in cybersecurity, competitive programming. My hobbies are painting and reading.',
     },
     {
@@ -182,33 +181,27 @@ interface Member {
 
 const MemberCard = ({ member }: { member: Member; }) => {
     return (
-        <TooltipProvider delayDuration={200}>
-            <Tooltip>
-                <TooltipTrigger>
-                    <div className="comic-panel text-center group flex flex-col items-center">
-                        <div className="comic-border bg-[#FFD6A5]/20 p-2 inline-block mx-auto mb-4 rounded-md overflow-hidden">
-                            <img src={member.image} alt={member.name} className="w-44 h-44 lg:w-52 lg:h-52 rounded-md object-cover transition-transform duration-300 group-hover:scale-110" />
-                        </div>
-                        <h3 className="comic-text mb-2">{member.name}</h3>
-                        <p className="text-lg">{member.role}</p>
-                        <div className="flex justify-center mt-2 space-x-3">
-                            {member.github && (
-                                <a href={member.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition-colors"><Github size={20} /></a>
-                            )}
-                            {member.linkedin && (
-                                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition-colors"><Linkedin size={20} /></a>
-                            )}
-                            {member.twitter && (
-                                <a href={member.twitter} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition-colors"><Twitter size={20} /></a>
-                            )}
-                        </div>
-                    </div>
-                </TooltipTrigger>
-                <TooltipContent side="bottom" className="bg-white border border-gray-200 shadow-lg rounded-lg p-4 max-w-xs">
-                    <p className="text-sm text-gray-700">{member.description}</p>
-                </TooltipContent>
-            </Tooltip>
-        </TooltipProvider>
+        <div className="comic-panel text-center group relative flex flex-col items-center">
+            <div className="comic-border bg-[#FFD6A5]/20 p-2 inline-block mx-auto mb-4 rounded-md overflow-hidden">
+                <img src={member.image} alt={member.name} className="w-44 h-44 lg:w-52 lg:h-52 rounded-md object-cover transition-transform duration-300 group-hover:opacity-30" />
+            </div>
+            <div className="absolute inset-0 bg-black z-50 group-hover:bg-opacity-90 flex flex-col gap-6 items-center justify-center text-white opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 transition-all duration-500 ease-in-out">
+                <p className="px-4 text-sm text-center">{member.description}</p>
+                <div className="flex justify-center mt-2 space-x-3">
+                    {member.github && (
+                        <a href={member.github} target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors"><Github size={20} /></a>
+                    )}
+                    {member.linkedin && (
+                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors"><Linkedin size={20} /></a>
+                    )}
+                    {member.twitter && (
+                        <a href={member.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors"><Twitter size={20} /></a>
+                    )}
+                </div>
+            </div>
+            <h3 className="comic-red comic-text mb-2">{member.name}</h3>
+            <p className="text-lg">{member.role}</p>
+        </div>
     )
 }
 
@@ -217,18 +210,18 @@ export default function Team() {
         <div>
             <h1 className="text-5xl font-black mb-12 text-center comic-text">Our Team</h1>
             <section className="mb-16">
-                <h2 className="text-4xl font-black mb-8 text-center comic-text">Core Members</h2>
+                <h2 className="comic-blue text-4xl font-black mb-8 text-center comic-text">Core Members</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {coreMembers.map((member, index) => (
-                        <MemberCard key={index} member={member}/>
+                        <MemberCard key={index} member={member} />
                     ))}
                 </div>
             </section>
             <section>
-                <h2 className="text-4xl font-black mb-8 text-center comic-text">Team Members</h2>
+                <h2 className="comic-blue text-4xl font-black mb-8 text-center comic-text">Team Members</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {teamMembers.map((member, index) => (
-                        <MemberCard key={index} member={member}/>
+                        <MemberCard key={index} member={member} />
                     ))}
                 </div>
             </section>

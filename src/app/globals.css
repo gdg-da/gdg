@@ -28,7 +28,6 @@
 @layer base {
   body {
     @apply bg-background text-foreground;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
   }
 }
 
@@ -166,7 +165,6 @@
 }
 
 .comic-text {
-  background: white;
   border: 3px solid black;
   padding: 0.5rem 1rem;
   font-weight: bold;
@@ -190,7 +188,6 @@
 }
 
 .comic-highlight {
-  background: #FFD700;
   border: 3px solid black;
   padding: 0.5rem 1rem;
   font-weight: bold;
@@ -213,6 +210,22 @@
   transform: rotate(calc(var(--random-rotate) * -1));
 }
 
+.comic-yellow{
+  background: #FFD700;
+}
+
+.comic-blue {
+  background: #4c94f6;
+}
+
+.comic-red {
+  background: #f64c4c;
+}
+
+.comic-green {
+  background: #4cf6a2;
+}
+
 .comic-dots {
   background-image: radial-gradient(circle, black 1px, transparent 1px);
   background-size: 10px 10px;
@@ -229,9 +242,9 @@
 }
 
 .comic-checkered-grid {
-  background: 
-    linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%, #222),
-    linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%, #222);
+  background:
+    linear-gradient(45deg, #4b4b4b 25%, transparent 25%, transparent 75%, #4b4b4b 75%, #4b4b4b),
+    linear-gradient(45deg, #4b4b4b 25%, transparent 25%, transparent 75%, #4b4b4b 75%, #4b4b4b);
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
 }

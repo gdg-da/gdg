@@ -45,7 +45,7 @@ export default function Events() {
                         <div className="comic-border mb-4 overflow-hidden">
                             <Image src={event.image} alt={event.title} width={300} height={200} className="w-full" />
                         </div>
-                        <h2 className="comic-text mb-2">{event.title}</h2>
+                        <h2 className="comic-yellow comic-text mb-2">{event.title}</h2>
                         <p className="text-lg mb-2">{event.type}</p>
                         <p className="text-lg mb-4">{event.description}</p>
                         <p className="text-lg mb-6">Date: {event.date}</p>
