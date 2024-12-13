@@ -29,7 +29,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="mt-8 text-center">
-                        <div className="zigzag mb-4"></div>
+                        <div className="zigzag mb-4 animate-fadeIn"></div>
                         <p className="comic-green comic-text">© {new Date().getFullYear()} GDG on Campus DA-IICT</p>
                     </div>
                 </div>

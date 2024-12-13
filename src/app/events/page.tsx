@@ -38,12 +38,12 @@ const events = [
 export default function Events() {
     return (
         <div>
-            <h1 className="text-5xl font-black mb-12 text-center comic-text">Events</h1>
+            <h1 className="text-5xl font-black mb-12 text-center comic-text animate-slideInFromLeft">Events</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {events.map((event) => (
-                    <div key={event.id} className="comic-panel">
-                        <div className="comic-border mb-4 overflow-hidden">
-                            <Image src={event.image} alt={event.title} width={300} height={200} className="w-full" />
+                {events.map((event, index) => (
+                    <div key={event.id} className="comic-panel animate-scaleIn" style={{ animationDelay: `${index * 0.1}s` }}>
+                        <div className="comic-border mb-4 overflow-hidden flex justify-center">
+                            <Image src={event.image} alt={event.title} width={300} height={200} className="h-[200px] object-contain" />
                         </div>
                         <h2 className="comic-yellow comic-text mb-2">{event.title}</h2>
                         <p className="text-lg mb-2">{event.type}</p>

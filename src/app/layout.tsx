@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className="gradient-bg min-h-screen flex flex-col">
         <div className="flex-grow">
           <div className="container mx-auto px-4 py-8">
-            <div className="comic-border bg-white p-6 random-rotate">
+            <div className="comic-border bg-white p-6 random-rotate overflow-hidden">
               <Header />
               <main>{children}</main>
             </div>

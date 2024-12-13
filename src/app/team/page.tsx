@@ -179,13 +179,13 @@ interface Member {
     twitter?: string;
 }
 
-const MemberCard = ({ member }: { member: Member; }) => {
+const MemberCard = ({ member, index }: { member: Member; index: number }) => {
     return (
-        <div className="comic-panel text-center group relative flex flex-col items-center">
+        <div className="comic-panel text-center group relative flex flex-col items-center animate-scaleIn" style={{ animationDelay: `${index * 0.1}s` }}>
             <div className="comic-border bg-[#FFD6A5]/20 p-2 inline-block mx-auto mb-4 rounded-md overflow-hidden">
                 <img src={member.image} alt={member.name} className="w-44 h-44 lg:w-52 lg:h-52 rounded-md object-cover transition-transform duration-300 group-hover:opacity-30" />
             </div>
-            <div className="absolute inset-0 bg-black z-50 group-hover:bg-opacity-90 flex flex-col gap-6 items-center justify-center text-white opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 transition-all duration-500 ease-in-out">
+            <div className="absolute inset-0 bg-black z-50 group-hover:bg-opacity-90 flex flex-col gap-6 items-center justify-center text-white opacity-0 group-hover:opacity-100 scale-0 group-hover:scale-100 transition-all duration-700 ease-in-out">
                 <p className="px-4 text-sm text-center">{member.description}</p>
                 <div className="flex justify-center mt-2 space-x-3">
                     {member.github && (
@@ -208,20 +208,20 @@ const MemberCard = ({ member }: { member: Member; }) => {
 export default function Team() {
     return (
         <div>
-            <h1 className="text-5xl font-black mb-12 text-center comic-text">Our Team</h1>
+            <h1 className="text-5xl font-black mb-12 text-center comic-text animate-fadeIn">Our Team</h1>
             <section className="mb-16">
-                <h2 className="comic-blue text-4xl font-black mb-8 text-center comic-text">Core Members</h2>
+                <h2 className="comic-blue text-4xl font-black mb-8 text-center comic-text animate-slideInFromLeft">Core Members</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {coreMembers.map((member, index) => (
-                        <MemberCard key={index} member={member} />
+                        <MemberCard key={index} member={member} index={index} />
                     ))}
                 </div>
             </section>
             <section>
-                <h2 className="comic-blue text-4xl font-black mb-8 text-center comic-text">Team Members</h2>
+                <h2 className="comic-blue text-4xl font-black mb-8 text-center comic-text animate-slideInFromRight">Team Members</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {teamMembers.map((member, index) => (
-                        <MemberCard key={index} member={member} />
+                        <MemberCard key={index} member={member} index={index} />
                     ))}
                 </div>
             </section>
